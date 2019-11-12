@@ -1,15 +1,21 @@
 'use strict'
 
-var arr = []
+var arr = ['jkjws', 'hjhkhk']
 
 var btnInput = document.querySelector('#render-input');
     
 var btnDellet = document.querySelector('#render-delete');
 
-var inputField = document.querySelector('#input-field');
+var container = document.querySelector('#post-lists');
 
-arr.push = inputField;
+var html = '';
 
+for(var post of arr){
+    html += `<li> post </li>`
+};
+
+container.innerHTML = html;
+/*
 function format(response) {
    return response.json()
 }
@@ -32,3 +38,4 @@ return html;
 
 
 console.log(arr)
+*/
