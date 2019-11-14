@@ -1,41 +1,21 @@
 'use strict'
 
-var arr = ['jkjws', 'hjhkhk']
+var arr = []
 
-var btnInput = document.querySelector('#render-input');
-    
-var btnDellet = document.querySelector('#render-delete');
+var inputWnd = document.querySelector('#vvod-pole');
 
-var container = document.querySelector('#post-lists');
+var btnInput = document.querySelector('#vvod-knopka');
 
-var html = '';
+var btnDellet = document.querySelector('#vvod-delete');
 
-for(var post of arr){
-    html += `<li> post </li>`
+
+btnInput.onclick = send;
+
+function send() {
+    var data = {
+        dannie: inputWnd.value,
+    }
+    arr.push(data)
 };
 
-container.innerHTML = html;
-/*
-function format(response) {
-   return response.json()
-}
-
-function render1(arr) {
-    var html = ''
-    for(var post of arr){
-        html += `<li>${post}</li>`
-    }
-return html; 
-}
-
-
-
-// arr.push = 'vasa';
-//function posts_to_arr() {
-//    var post = document.querySelector("render-input");
-//        arr.push = post;
-//}
-
-
-console.log(arr)
-*/
+console.log(arr);
